@@ -7,7 +7,7 @@ const Bebida = ({bebida}) => {
   return (
     <Col md={6} lg={3} className='mb-3 mt-4'>
         <Card>
-            <Card.Img variant="top" src={bebida.strDrinkThumb} />
+            <Card.Img variant="top" src={bebida.strDrinkThumb} alt={`imagen receta ${bebida.strDrink}`}/>
             <Card.Body>
                 <Card.Title>{bebida.strDrink}</Card.Title>
                 {/* <Card.Text>
