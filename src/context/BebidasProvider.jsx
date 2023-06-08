@@ -5,6 +5,12 @@ const BebidasContext = createContext();
 
 const BebidasProvider = ({children}) => {
     const [bebidas, setBebidas] = useState([])
+    const [modal, setModal] = useState(false)
+
+    const handleClickModal = ()=>{
+        setModal(!modal)
+    }
+
     const consultarBebida = async bebida =>{
         try {
             const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${bebida.nombre}&c=${bebida.categoria}`
@@ -19,7 +25,9 @@ const BebidasProvider = ({children}) => {
         <BebidasContext.Provider
             value={{
                 consultarBebida,
-                bebidas
+                bebidas,
+                modal,
+                handleClickModal
             }}
         >
             {children}
