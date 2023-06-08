@@ -3,7 +3,7 @@ import useBebidas from "../hooks/useBebidas"
 import Bebida from "./Bebida"
 const ListadoBebidas = () => {
   const {bebidas} = useBebidas()
-  console.log(bebidas)
+  // console.log(bebidas)
   return (
     <Row>
         {bebidas.map( bebida => (
